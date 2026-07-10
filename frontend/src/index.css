@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---- Palette: "academic ledger" ---- */
+  --color-paper:      #FAF9F5;
+  --color-paper-dim:  #F1EFE7;
+  --color-ink:        #1B1A17;
+  --color-ink-soft:   #4A4740;
+  --color-navy:       #1C2B45;
+  --color-navy-soft:  #2E4066;
+  --color-brass:      #A6803D;
+  --color-brass-soft: #C9A85F;
+  --color-line:       #DDD8CB;
+
+  --color-success:    #3F6B54;
+  --color-success-bg: #E6EEE8;
+  --color-warning:    #9A6B1E;
+  --color-warning-bg: #F5EBD8;
+  --color-danger:     #9A3B2C;
+  --color-danger-bg:  #F4E5E1;
+  --color-info:       #2E4066;
+  --color-info-bg:    #E7EAF1;
+
+  /* ---- Type ---- */
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  --radius: 3px;
+  --shadow-card: 0 1px 2px rgba(27,26,23,0.06), 0 1px 12px rgba(27,26,23,0.04);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin: 0 0 0.4em 0;
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--color-navy-soft); }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-brass-soft);
+  color: var(--color-ink);
+}
